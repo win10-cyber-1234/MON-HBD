@@ -2,16 +2,82 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Connexion</title>
+  <title>Connexion | Anniversaires</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .login-box h2 {
+      color: #1877f2;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1877f2;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-box button:hover {
+      background-color: #166fe5;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
   <div class="login-box">
     <h2>Connexion</h2>
     <input type="text" id="username" placeholder="Ton prénom" />
-    <input type="password" id="password" placeholder="Mot de passe" />
+    <input type="password" id="password" placeholder="Mot de passe (1234)" />
     <button onclick="login()">Se connecter</button>
     <p id="error" class="error"></p>
+    <div class="footer">© Projet Galerie 2025</div>
   </div>
 
   <script>
@@ -23,9 +89,10 @@
         localStorage.setItem("username", username);
         window.location.href = "index.html";
       } else {
-        document.getElementById("error").innerText = "Mot de passe ou nom invalide.";
+        document.getElementById("error").innerText = "Mot de passe ou prénom invalide.";
       }
     }
   </script>
 </body>
 </html>
+
