@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galerie Anniversaire</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎉 Bienvenue, <span id="user-name"></span> ! 🎂</h1>
+    <button onclick="logout()">Déconnexion</button>
+  </header>
+
+  <main class="gallery" id="gallery">
+    <!-- Galerie initiale -->
+    <img src="000.jpg" alt="Anniversaire 1" onclick="zoom(this)" />
+    <img src="1111.jpg" alt="Anniversaire 2" onclick="zoom(this)" />
+    <img src="2222.jpg" alt="Anniversaire 3" onclick="zoom(this)" />
+  </main>
+
+  <!-- Formulaire ajout de photo -->
+  <div class="upload-section">
+    <h3>Ajouter une nouvelle photo</h3>
+    <input type="file" id="fileInput" accept="image/*" />
+    <button onclick="addPhoto()">Publier</button>
+  </div>
+
+  <div id="popup" class="popup" onclick="closePopup()">
+    <img id="popup-img" src="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

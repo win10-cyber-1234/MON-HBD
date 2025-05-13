@@ -1,0 +1,36 @@
+.login-box {
+    max-width: 300px;
+    margin: 100px auto;
+    background-color: #ffe3ec;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  
+  .login-box input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .login-box button {
+    padding: 10px 20px;
+    background: #ff4081;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .upload-section {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
